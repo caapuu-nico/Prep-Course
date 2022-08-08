@@ -1,11 +1,10 @@
-<style>
- h1{
+h1{
     color:blue
 }
 img{
     width: 400px;
 }
-divClass{
+divClass{ color: blue;
 
 }
 #tercerDiv{
@@ -20,4 +19,3 @@ divClass{
     Margin: 50px;
 
 }
- </style>
