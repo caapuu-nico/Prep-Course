@@ -1,21 +1,43 @@
-h1{
+h1{display: block;
+    text-align: center;
     color:blue
+    
+}
+h3{
+    display: flex;
+    flex-direction: row-reverse;
+    position: fixed;
+    color: antiquewhite;
+
 }
 img{
     width: 400px;
+
+    
 }
-divClass{ color: blue;
+divClass{display: flex;
+    
+    text-align: center;
+    color: blue;
+    position: fixed;
 
 }
 #tercerDiv{
+    position: relative;
+    top: 100px;
+    left: 200px;
     height: 600px;
     width: 500px;
     background-color: peru;
     padding:50px;
     border: 2px solid black;
+    
+
 }
 #spanId {
     font-size: 18px;
     Margin: 50px;
+    
 
 }
+
