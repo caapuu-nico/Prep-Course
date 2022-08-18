@@ -1,5 +1,45 @@
-#divTitulos h1{
+#divTitulos {
     color: darkslateblue;
+    text-align: center;
+    text-decoration: underline;
 }
+h4{font-size: large;
+    text-align:center
+
+}
+
+.contacto {
+    text-decoration: underline;
+    background-color:aqua;
+    border-style:groove;
+    display: inline-block;
+    font-size: large;
+    position: fixed; right: 40px; 
+position: fixed; top: 20px;
+}
+#divPresentacion{display: flex;
+    text-align:center;
+    background-color: blue;
+    flex-wrap: wrap; top: 200px;
+    flex-flow: column;
+    font-size: larger;
+   
+    
+    
+}
+img{
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 190px;
+    height: 190px;
+    border-style:double
+
+}
+body{
+    background-color: cornflowerblue;
+}
+
+
 
     
