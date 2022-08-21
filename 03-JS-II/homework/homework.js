@@ -5,12 +5,11 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-var numeroMasgrande = Math.round(x, y) ;
-return numeroMasgrande;
-{if( x===y );
-  return; Math.random
-
-} }
+if( x > y ){
+  return x;
+}
+return y; 
+}
 
 
 
@@ -19,12 +18,12 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if(edad => 18){
-    return "Allowed"
-  }else(edad < 18)
-    return "Not allowed"
+  if(edad >= 18){
+    return "Allowed";
+  }else{
+    return "Not allowed";
   }
-
+}
 function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
   //Cuando el estado es igual a 1, el usuario está "Online"
@@ -70,13 +69,21 @@ function colors(color) {
   //Usar el statement Switch.
 switch(color)
 {
-  case 1:("blue");
-  break ;  "This is blue";
-  case 2 : ("red");
-    break; "This is red";
-    {
+  case "blue":
+  return "This is blue"
 
-  }
+  case "red":
+    return "This red"
+  
+  case "green":
+    return "This is green"
+ 
+  case "orange":
+  return "This is orange"
+  default: 
+  return "Color not found"
+
+}
 }
 
 
