@@ -5,21 +5,41 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-}
+var numeroMasgrande = Math.round(x, y) ;
+return numeroMasgrande;
+{if( x===y );
+  return; Math.random
+
+} }
+
+
+
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-}
-  
+  if(edad => 18){
+    return "Allowed"
+  }else(edad < 18)
+    return "Not allowed"
+  }
+
 function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
   //Cuando el estado es igual a 1, el usuario está "Online"
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-}
+if(status === 1){
+  return "Online";
+}if(status === 2){
+  return "Away";
+}else (status => 3);{ 
+  return "Offline";
+  
+} 
+  }
 
 function saludo(idioma) {
   // Devuelve un saludo en tres diferentes lenguajes:
@@ -28,7 +48,17 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
+  if(idioma === "aleman"){
+  return "Guten Tag!"
+}if(idioma === "mandarin"){
+    return "Ni Hao!"
+}if(idioma === "ingles"){
+    return "Hello!"
 }
+return "Hola!"
+
+}
+
 
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
@@ -38,7 +68,23 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+switch(color)
+{
+  case 1:("blue");
+  break ;  "This is blue";
+  case 2 : ("red");
+    break; "This is red";
+    {
+
+  }
 }
+
+
+
+
+
+
+
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
@@ -132,4 +178,4 @@ module.exports = {
   tablaDelSeis,
   tieneTresDigitos,
   doWhile
-};
+}

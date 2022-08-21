@@ -1,0 +1,181 @@
+repaso
+function nombreDelafuncion {(argumento1, argumento2, argumento3)´
+// codigo de la funcion;
+
+return // nombre de la funcion o variable;
+}
+nombreDelafuncion(-1 , 2, 1, "caca", false);
+nombre de la funcion (null; undefined);
+
+
+//EXPRESIONES
+//boleanos
+1 < 2 = true
+2 == 2 = false 
+
+
+//STATEMENT
+//flujo de control
+if(condicion) {
+    // codigo
+}else{
+
+}
+EJEMPLO
+if (1 > 2 && 2 > 1) {
+    console.log("uno menos que dos");
+}
+
+if (10 > 1){
+ console.log("este codigo se ejecuta si es true")
+    }else{console.log("este codigo se ejecuta si es false")
+    console.log("este codigo se ejecuta si es true")}
+
+      //SIEMPRE ES RECOMENDABLE USAR EL "===" PARA COMPARAR Y QUE DE VALOR VERDADERO
+    //COMPARA OBJETO Y VALOR SI NO CON EL "==" JAVA SRIPT BUSCARIA CONVERTIR EL NUMERO A STRING Y DARIA VALOR VERDADERO
+   
+   
+   
+   
+   
+   
+   
+    // || ("O" // "OR")
+    // && ("Y" //"AND")
+    //! "NOT"
+    // !! "NOT" "NOT"
+ 
+
+    //  {!(!a  ||  !b)} en este caso seria lo mismo decir     ====>  (a && b)
+
+
+    //DRY CODE
+
+    // IMPRIMIR LOS NUMERO DEL 1 AL 10
+    console.log(1);
+    console.log(2);
+    console.log(3);
+    console.log(4);
+    console.log(5);
+    console.log(6);
+    console.log(7);
+    console.log(8);
+    console.log(9);
+    console.log(10);
+
+     // funncion que imprima los numero del 1 a N ( QUE PASE POR ARGUMENTO ) 
+     //STATEMENT
+
+     for (var i = 0;              i <=100;                            i++                             ) { // bloe de codigo// }
+      // cnt de repeteciones      que se ejecutee                      el paso de como se incrementa
+      //que va hacer               mientras que ("i") 
+      //                               sea menor o igual a 100
+      //                              (condicion de frenado)
+
+      ejemplo: 1  a 100
+      for(var i = 1; i <= 100; i++){
+        console.log(i)
+
+      }
+       ejemplo // function imprime 1 a N         
+       function imprime1aN(n) {
+        for(var i = 1; i <= n; i++){
+            console.log(i);
+        }
+       }
+
+ // se detiene en 200 por qe le doy otra condicion
+        function imprime1aN(n){
+        for(var i = 1; i <= n; i++)
+        {if( i % 2 === 0){
+            console.log(i)}
+            if( i > 200) {                
+                return;
+            }
+        }
+    }
+
+
+// dos condiciones // imprime del 1 al 200 (se detiene) y luego imprime del 1 al 9 y luego return
+
+function imprime1aN(n){
+    for(var i = 1; i <= n; i++)
+    {if( i % 2 === 0){
+        console.log(i)}
+        if( i > 200) {                
+        for(var j = 0; j < 10; j++){
+            console.log(j);}
+        
+        return;}
+    }
+}
+    
+bucle anidaddo
+
+//   n filas
+//   m columnas
+
+function matriz(n, m) {
+    for(var i = 0; i < n; i++) {for (var j=0; j < m; j++){
+        console.log(i + "." + j);
+    } 
+    }
+}
+
+
+
+        
+     0 1 2 3              i j
+0    1 2 3 4              0 0
+1    5 6 7 8              0 1
+2    9 1 2 3              0 2
+                          0 3
+                          1 0
+                          1 1
+                          1 2
+
+
+//while (condicion)
+ {
+    // bloque de codigo
+     }
+
+
+
+                                           for (var i= 0; i > 100; i++){
+                                            //bloque de codigo
+                                            }    // "for"
+
+
+
+//WHILE
+
+var i= 0;                           
+while(i < 100){
+    console.log(i);
+i++;}                               
+// siempre logear el 1++ (si no se crea bucle infinito)
+
+
+
+var j = 0;                           
+while( j < 100){
+    console.log(j);
+}   
+
+
+
+function matriz(n, m){
+    var j = 0;
+    var i = 0;
+    while (i < n){
+        while(j < m){
+            console.log(i, j);
+            j = j +1;
+        }
+        j = 0;
+        i = i +1;
+    }
+}
+
+
