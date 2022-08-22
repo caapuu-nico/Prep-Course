@@ -67,12 +67,12 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-switch(color)
-{
+ // compara lo que esta adentro de colo // con lo que esta al lado del case
+switch(color){
   case  "blue":
     return "This is blue";
   case  "red":
-    return "This red";
+    return "This is red";
   case "green":
     return "This is green";
   case "orange":
@@ -124,7 +124,10 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
- return numero % 1 === 0
+  //return numero % 1 === 0
+if(numero === Math.floor(numero)){
+  return true;}
+  return false;
 }
 
 function fizzBuzz(numero) {
@@ -150,19 +153,19 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
 if(num1 === 0 || num2 === 0  ||  num3 === 0){
-  return "Error"
+  return "Error";
 }
-if(num1 <0   || num2 < 0 || num3 < 0 ){
-  return "Hay negativos"
-} if (num3 > num1 && num3 > num2){
-  return num3 + 1;
+if(num1 < 0   || num2 < 0 || num3 < 0 ){
+  return "Hay negativos";
 }
-
-  if(num1 > num2 && num1 >  num3 && num1 > 0 ){
-  return "Numero 1 es mayor y positivo"
+if(num1 > num2 && num1 >  num3 && num1 > 0 )
+{
+  return "Número 1 es mayor y positivo";
 }
-return false
-
+if(num3 > num1 && num3 > num2){
+  var nuevoNum3 = num3 + 1;
+  return nuevoNum3;}
+return false;
 }
 
 
@@ -175,7 +178,28 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-}
+
+//numero =15;  si numero valiera 15 como ejemplo
+// 15 % 1   ---> 0 No lo voy a iterar
+// 15 % 2 --- > ! == 0
+// 12 % 3 --- > 0 
+ // 1 calcula numero % 2 y segui calculando hasta numero % numero - 1 ; y si al final del recorrido o de la repeticion alguna cuenta da 0, corta todo
+ // detene ejecucuion y retona "false"
+// si  termino el punto 1 y ninguna cuenta dios 0, retorna true
+//la i() de let i=0 [significa a apartir de que numero se va a repetir la validacion  
+//ejemplo: (var o let i=2) .... i=3.... i=4.....i=5.....i=6.... etc]
+
+
+if(numero ===0  || numero === 1){
+return false}
+  
+for(let i=2 ; i < numero ; i++)
+if(numero % i === 0){
+  return false;
+} return true;
+
+} 
+
 
 
 
@@ -196,20 +220,48 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  var array = [];
+  for (var i=0 ; i < 11 ; i++)
+  array.push(6*i);
+return array;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
-}
+  if(numero >= 100 && numero < 1000) {
+    return true}
 
+    return false;
+  }
+
+/* otra forma 2020 + "hola"-----> "2020hola"
+var str = numero + "" ;
+var digitos = str.lenght;
+if (digitos === 3) {
+  return true;}
+  else{
+    return false;
+  }
+}*/
+ 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+
+var  valorfinal = (numero)
+var i = 0;
+
+do{
+  i=i+1;
+  valorfinal = valorfinal + 5;
 }
+  while (i < 8);{
+    return valorfinal;
+}
+}
+
 
 
 // No modificar nada debajo de esta línea
