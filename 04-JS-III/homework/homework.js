@@ -1,4 +1,7 @@
 // No cambies los nombres de las funciones.
+// ARRAY: UN CONJUNTO DE ELEMENTOS QUE SE PUEDEN ACCEDER A TRAVES DE UN INDICE   
+
+
 
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
@@ -31,11 +34,12 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-var incrementarPorUno =(array === Math.floor(array))+1
-return incrementarPorUno.length;
+for(let i= 0 ; i < array.length ; i++)
+{array[i] += 1}
+return array;
+
 
 }
-
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
@@ -64,8 +68,10 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var str =(palabras + " ");
-  return str;
+  let string = (palabras.join(" "));
+  return string;
+  
+  
 }
 
 
@@ -73,11 +79,15 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-var arrayContiene = (array); 
-  if (arrayContiene.length[elemento]);
-  return true;
+  
 
-return false 
+if(array.includes(elemento)){
+return true;
+}
+else{
+return false;
+}
+
 
 }
 
@@ -86,6 +96,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+const  newArray = (numeros) 
+for(let i = 0; i <numeros; i++){
+  sum += newArray[i];
+
+}return newArray
 }
 
 
@@ -93,6 +108,12 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+const promedios = resultadosTest
+  for (let i = 0 ; i < resultadosTest ; i++);
+  {return resultadosTest
+  }
+
+
 }
 
 
