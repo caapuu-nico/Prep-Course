@@ -6,8 +6,11 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-const devolverPrimerElemento = (array);
-return (devolverPrimerElemento [0]) ;
+  // array  ["tomate" , 1 , 2 "caca"]
+//array [0];
+
+
+return array [0] ;
 
 }
 
@@ -17,23 +20,27 @@ function devolverUltimoElemento(array) {
   // Tu código:
   const devolverUltimoElemento = (array);
   return (devolverUltimoElemento[devolverUltimoElemento.length  -1]);
-}
+}// tambien podesmos usar 
+//return array.pop();
+//return array.shift();
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-const obtenerLargoDelArray=(array);
- return obtenerLargoDelArray.length;
+
+  return array.length;
+
 }
-
-
 
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+
+  // array = [1 ,2 ,3 ,4]
+  // i = 0
 for(let i= 0 ; i < array.length ; i++)
 {array[i] += 1}
 return array;
@@ -45,9 +52,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  var agregarItemAlComienzoDelArray=(array);
-  agregarItemAlComienzoDelArray.push (elemento);
-  return agregarItemAlComienzoDelArray;
+  array.push(elemento);
+  return array;
+  //primero se agrega el elemento luego se retorna el arreglo con el elemento dentro ya
 }
 
 
@@ -56,9 +63,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  var agregarItemAlComienzoDelArray=(array);
-  agregarItemAlComienzoDelArray.unshift(elemento);
-  return agregarItemAlComienzoDelArray;
+  array.unshift(elemento);
+  return array;   // igual que con push y pop se agrega el elemento luego devuelta el array
 }
 
 
@@ -70,7 +76,10 @@ function dePalabrasAFrase(palabras) {
   // Tu código:
   let string = (palabras.join(" "));
   return string;
-  
+  //let string = palabras[0];
+  //for (let i = 1 ; i < palabras.length ; i ++){
+  //string = string + " " + palabras [i]
+  //}return string;
   
 }
 
@@ -87,6 +96,11 @@ return true;
 else{
 return false;
 }
+// for (var i = 0 ; i < array.lenght; i ++)
+//if ( array[i]  ===== elemento ){
+//return true} 
+//return false
+
 
 
 }
@@ -112,26 +126,50 @@ function promedioResultadosTest(resultadosTest) {
  while ( i < array){
   summ = summ + resultadosTest [i++];
  }return summ / array
-
-  
-
-
 }
-
+  /* var suma  = 0;
+      var promedio = 0
+      for(var i = 0 ; i < resultadosTest.lenght ; i++){
+        suma = suma + resultadosTest[i]}
+        promedio = suma / resultadosTest.lenght;
+        return promedio */
+      
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  
+let grande = numeros[0]
+for (let i = 0 ; i < numeros.length ; i++)
+if(numeros[i] > grande){
+  grande  = numeros[i]}
+  return grande 
+
+// return Math.max(...numeros);          forma mas facil y rapida de devolver mayor numero
 }
+  
+
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+// cuando no aparacen datos hay que poner 
+//console.log(arguments);
+//multiplicarArgumentos();
+if (arguments.length === 0){
+  return 0}
+
+  let producto = arguments[0]
+  for (let i = 1 ; i < arguments.length ; i++ )
+  
+  {producto =producto*arguments[i]}
+  return producto;
+
 }
+
+
 
 
 function cuentoElementos(arreglo){
