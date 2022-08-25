@@ -144,9 +144,9 @@ for (let i = 0 ; i < numeros.length ; i++)
 if(numeros[i] > grande){
   grande  = numeros[i]}
   return grande 
-
-// return Math.max(...numeros);          forma mas facil y rapida de devolver mayor numero
 }
+// return Math.max(...numeros);          forma mas facil y rapida de devolver mayor numero
+
   
 
 
@@ -176,6 +176,16 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
+var mayor = 0;
+  for (let i = 0 ; i < arreglo.length ; i++)
+  if( arreglo[i] > 18){
+    mayor = mayor + 1 ;
+  }
+
+    return mayor;
+
+
+
 }
 
 
@@ -184,7 +194,10 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+  if(numeroDeDia === 1 ||  numeroDeDia === 7 ){
+  return "Es fin de semana";}
+
+  return "Es dia Laboral";
 } 
 
 
@@ -192,7 +205,12 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  var  string = n.toString();   // parameTro para convert numeros en "STRING"
+ if (string[0] === "9"){
+  return true
+ }else{
+  return false
+ }
 }
 
 
@@ -201,6 +219,20 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
   
+   //     arreglo = [2 ,3, 5, 2]
+  var arrayigual = arreglo[0]    //arreglo[0]   =   1  ( busca en el arreglo el punto 0 osea 1  )     
+
+
+  for (var i = 1 ; i < arreglo.length ; i++){
+          
+    if ( arrayigual !== arreglo[i]){
+        // 1     si es diferente se usa !==                      // seria inutil comparar     arrayigual con arreglo[1](si tienen el mismo valor de inicio)
+     
+     
+        return false
+    }return true;
+
+  }// recorre todo el arreglo hasta encontrar una distintinta y tira false 
 } 
 
 
@@ -209,6 +241,17 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var nuevoArray =[] // avisa que vamos a crear un nuevo array "[]"
+  for(var i = 0 ; i < array.length ; i++){
+  if(array[i] === "Enero" ||     array[i] === "Marzo" ||  array[i] === "Noviembre" )
+  nuevoArray.push(array[i])}
+  if(nuevoArray.length !==  3 ){
+  
+  return "No se encontraron los meses pedidos"}
+  else{
+
+  }return nuevoArray;
+
 }
 
 
@@ -216,8 +259,14 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var nuevoArray =[];
+  for(var i = 0   ; i < array.length ; i++){
+    if (array[i] > 100){
+    nuevoArray.push(array[i])
+    }
+  }
+    return nuevoArray
 }
-
 
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -227,7 +276,34 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var cont = 0
+  var array = [];                       //        i=   0  1   2  3   4  5  6  7  8
+  for(let i= 1 ; i <= 10 ; i++)  //   numero == [ 1, 2 , 3 ,4  ,4 ,5 ,6, 4, 5]
+  {numero = numero + 2;
+  cont = i;
+  array.push(numero);
+
+  if(numero === cont){
+    break; 
+  }
 }
+ if(numero === cont)
+  {return "Se interrumpió la ejecución"}else{
+    return array;
+  }
+} 
+
+
+
+ //numero = numero + 2 ---> hasta 10 veces
+// cont = cont + 1 
+// array .push (numero)
+// retornar array
+// numero == cont ---> break 
+// retorna "Se interrumpio la ejecución"
+
+
+
 
 
 function continueStatement(numero) {
@@ -237,8 +313,23 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+var nuevoarray = []
+var cont = 0
+for (let i = 1 ; i <= 10 ; i++){
+  if(cont=== 5){
+    continue  }      
+
+
+  numero = (numero+2)
+cont = i;
+nuevoarray.push(numero);
+
+                  // si no cumple con lo dicho continua con la iteracion en ves de cortarse como el break
 }
 
+
+return nuevoarray;
+}
 
 // No modificar nada debajo de esta línea
 // --------------------------------
