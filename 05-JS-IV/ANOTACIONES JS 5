@@ -1,0 +1,27 @@
+/*OBJETOS (TODO REPRESENTA UN OBJETO EN JAVASCRIPT)
+ES UNA COLLECION DE PROPIEDADDES ES UNA ASOCIACION ENTRE UN NOMBRE Y UN VALOR
+KEY VALUE 
+TENGO UNA ESTRUCTURA DE DATOS CON UN NOMBRE Y EL VALOR EJEMPLO
+VAR PERSON -------- NOMBRE   ------------ "MARIO"
+
+                    TRABAJO--------------- " plomero"/*
+
+                    ejemplo correcto
+
+                    Var boris= {
+                        nombre: " boris"
+                        edad :  33
+                        cursando : true
+                    }
+   //                  var  nico {
+                        edad : 27
+                        nombre: nico
+                        cursando : true 
+                          saludar : function(){
+                            console.log(hola , Nico");
+                          }
+                        hobbies: [¨"cagar", "comer" ,"cojer"] }
+
+
+                        
+
