@@ -316,14 +316,15 @@ function continueStatement(numero) {
 var nuevoarray = []
 var cont = 0
 for (let i = 1 ; i < 10 ; i++)
-  if(cont=== 5){
-    continue  }
-    else { 
+  if(cont === 5){
+    continue }
+    else{ 
 numero = numero+2;
 nuevoarray.push(numero);
 }
 
-return nuevoarray}
+return nuevoarray
+}
 
                        // si no cumple con lo dicho continua con la iteracion en ves de cortarse como el break
 
