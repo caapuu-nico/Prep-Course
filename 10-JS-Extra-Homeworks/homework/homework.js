@@ -10,14 +10,26 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-}
+ // var array = Object.keys(objeto).map(function (key) {return[number(key), objeto[key]];});
 
-
+  
+  var array = Object.entries(objeto);
+return array;
+  }
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+
+  var str = string;
+  var str = [str];
+  var arraystr = array.from(string);
+    
+  
+
+
+
 }
 
 
@@ -26,7 +38,22 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+//                 s  o  y   H   E  N   R  Y
+// [I]             0  1   2  3   4  5   6  7  
+let mayus = ""
+let min = ""
+for(var i = 0 ; i< s.length   ; i++){
+if(s[i] === s[i].toUpperCase() ){
+mayus += s[i];
+} else {
+  min +=  s[i];
 }
+}
+  var nuevapalabra = mayus + min;
+  return nuevapalabra;
+}
+
+
 
 
 function asAmirror(str) {
@@ -35,8 +62,11 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-} 
+  var nuevastring = (str);
+  for (var i= 0 ; i<nuevastring.length ; i++);
 
+
+} 
 
 function capicua(numero){
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
