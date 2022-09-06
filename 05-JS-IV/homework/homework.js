@@ -143,12 +143,16 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
- // posta = usuario.posts----> [{likes:entero}      {likes:entero}      {likes:entero}]
+ // posta = usuario.posts----> [{likes:1}      {likes:2}      {likes:3}]
   var suma = 0
   var posts = usuario.posts;
   for (var i = 0 ; i < posts.length ; i++){
-suma = suma + posts[i].likes
-  }return suma;
+  suma = suma + posts[i].likes
+//  0  =   0   +    1
+//  1  =   1   +    2
+//  3  =   3    +   3   
+//  6  =   6                     post[0](ingreso 1° posicion) ---> en propiedad likes donde estan los enteros 
+}return suma;
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -166,7 +170,7 @@ producto.calcularPrecioDescuento = function(){
   var precioConDescuento = producto.precio - descuento;
 return precioConDescuento
 }
-return producto
+return producto  // tambien podemos utilizar this en ves de producto this copia como parametro el objetos en el cual estamos trabajando
 
 }
 

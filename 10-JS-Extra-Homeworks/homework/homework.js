@@ -21,16 +21,22 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-
-  var str = string;
-  var str = [str];
-  var arraystr = array.from(string);
-    
-  
-
-
-
+                            //          
+                       //        [i]    0    1      2      3     4      5
+                                 //   ["a", "a"  , "d " , "f" , "f" ,  "x"]
+                                    //  i
+  var nuevoObj = {};
+  for(var i = 0 ;  i < string.length ; i++){
+    if(!nuevoObj.hasOwnProperty(string[i])){
+    nuevoObj[string[i]] = 1;
+  }else
+  {
+     nuevoObj[string[i]]++ ;
+    }
+  } 
+    return nuevoObj;
 }
+
 
 
 function capToFront(s) {
@@ -43,7 +49,7 @@ function capToFront(s) {
 let mayus = ""
 let min = ""
 for(var i = 0 ; i< s.length   ; i++){
-if(s[i] === s[i].toUpperCase() ){
+if(s[i] === s[i].toUpperCase()){
 mayus += s[i];
 } else {
   min +=  s[i];
@@ -62,8 +68,17 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  var nuevastring = (str);
-  for (var i= 0 ; i<nuevastring.length ; i++);
+  //   frase   "    "HOLA" "COMO  "
+  //        I =     0123 4 5678   "caca con meo" (string)
+//          I  =    
+var nuevaPalabra =str.split(" "); // "caca"  "con"  "meo"   (split) (" ")       ==> [array]      
+for(let i =0 ; i < nuevaPalabra.length; i++)
+{//["caca"] ==>   [c,a,c,a](split) , "a","c" "a","c" (reverse),    "acac" (Join), 
+  nuevaPalabra[i]  = nuevaPalabra [i]. split("").reverse().join("");
+//variable        <= ¿que quiero guardar aca dentro?
+
+}return nuevaPalabra.join(" ");
+
 
 
 } 
@@ -73,6 +88,15 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+//                                               i
+
+  var str = numero.toString();               
+ if(str.split("").reverse().join("") === str){
+ return  "Es capicua"}else
+ { return "No es capicua";
+ }
+
+ 
 }
 
 
@@ -80,14 +104,35 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+ /*var Nuevacadena = cadena.split("");
+ for(i = 0; i < Nuevacadena.lenght ; i++ );
+ if(Nuevacadena[i] === "a" && Nuevacadena[i] ==="b" && Nuevacadena[i] === "c" );
+ return Nuevacadena */
+  var nuevacadena = cadena.replace("a", "").replace("b", "").replace("c", "");
+  return nuevacadena;
+    
+  
 }
 
 
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
-  //Escribe tu código aquí
+  //Escribe tu código aquí                                               [i]   0
+ arr.sort(function(a, b){
+ if(a.length > b.length){
+ return 1;}
+ if (a.length < b.length){
+  return -1;}
+  return 0;
+ })
+return arr 
+
 }
+//   retorna -1 ---> a , b   primero va a
+//    retorna  1---> b, a     primero va b
+//     retorna 0 ---- >  a, b   quedan igual
+
 
 
 function buscoInterseccion(arreglo1, arreglo2){
@@ -96,7 +141,30 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+//  arreglo1 [1 , 2 , 3 , 4 , 5 ] ------  arregrlo 2 [1, 7 , 3 , 4 , 5]     ====> nuevoarray [ 3,  4,   5 ] 
+ //           i                                       j
+ //               i                                      j
+ //                                                          j
+ //cuando [j] cumple su ciclo y termino [i]cambia                j                                  
+  //    y [j] vuelve a iniciar el bucle                              j                        
+//                                                               
+//                                                                    
+
+ var numerosencomun = [];
+ for (var i=0 ; i < arreglo1.length ; i++)
+ //tiene prioridad el primer for [i] hasta que no cumple su proposito el segundo for [J](que termine el circuito)  el primero [i] no cambia su valor                                             
+ {         
+ for (var j=0; j < arreglo2.length ; j ++){
+ if(arreglo1[i]  === arreglo2[j]){
+ numerosencomun.push(arreglo1[i]);
 }
+}
+}
+return numerosencomun ;
+  }
+
+
+
 
 
 
