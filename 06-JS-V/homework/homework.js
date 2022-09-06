@@ -18,7 +18,8 @@ function crearUsuario() {
               return "Hola, mi nombre es " + this.nombre;
             };
   return Usuario;
-}
+} 
+//    this.saludar  = function() { return ¨Hola, mi nombre es ${this.nombre}¨ };
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
@@ -36,14 +37,15 @@ function agregarStringInvertida() {
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
 String.prototype.reverse = function(){             // Pababra Hola que tiene largo de 4
-     var invertida =" ";                            //                       THIS.LENGHT             0   1   2   3
+     var invertida = "";                            //                       THIS.LENGHT             0   1   2   3
      for(var i = this.length - 1 ; i >= 0; i--){     //THIS ===> ES ""  HOLA ""                      H   O   L   A                                      
-      invertida = invertida + this.charAt[i];                     //    I = 0 - 1  = ( A ) PREGUTA ¡ ¿[I]? ES >= a 0, NO POR QUE [I] VALE 3   ES LA LETRA (A) DE "HOLA" ENTONCES VUELVE A HACER EL BUCLE                      
+      invertida += this[i] ;                  //    I = 0 - 1  = ( A ) PREGUNTA ¡ ¿[I]? ES >= a 0, NO POR QUE [I] VALE 3   ES LA LETRA (A) DE "HOLA" ENTONCES VUELVE A HACER EL BUCLE                      
                                                       //  I = 2  =  ( L ) PREGUNTA   ¿[I]?ES >= a 0 , NO POR QUE [I] VALE 2  ES LA LETRA (L) DE "HOLA"  ENTONCES VUELVE A HACER EL BUCLE            
                                                      // [I] VA CAMBIANADO SU VALOR DE ATRAS PARA DELANTE  HASTA QUE CUMPLA SU PROPOSITO   ( I --) 
   }                                                 // INVERTIDA +- THIS[i]  QUEREMOS QUE CADA VES QUE SE CUMPLE EL BUCLE COMPLETA INVERTIDA DICHA POSICION ESTE [i]
-  return invertida;
-};
+return invertida;
+}
+
 }
  // OTRO METODO SERIA        return this.split("").reverse().join("");
 
